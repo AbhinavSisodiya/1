@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML NOTES</title>
+
+</head>
+
+<body style="background-color: honeydew;"> 
+
+  <!-- in order to format any element using inline css it is done using style element inside the required element -->
+
+</p><h1 style="color:lightcoral;">This is used for heading and is called heading tag</h1>
+
+<!--This is a comment and does not reflect on the actual website.
+always remember to use and read the docmentation on devdocs... -->
+<!-- <h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6> -->
+
+<!-- there are two types of tags i.e. that require opening and closing tag, and other that does not require closing tag... eg. <br> and <hr>-->
+
+<!--In order to replicate eg a line you can inspect that line and read the according info.-->
+
+<hr> <!-- this tag inserts a line -->
+
+<hr size="" noshade style="border-style: none">
+
+<center></center> <!-- anything between this comes in center-->
+
+<h1 style="color: lightseagreen;"> Currently we are using html 5</h1>
+
+<!-- The doctype on the html tells the browser to render the file as html 5 as
+we write <!DOCTYPE html>
+html file has two parts head and body
+head contains some imp info and body contains the content
+Then we have something called meta;
+and from the boiler plate code we can see  meta charset that stands for character set... in this case is the utf8
+inside the head of the html file we also have a title that gets displayed in the name of the file. in the browser that we are using...
+
+utf 8 is the encoding system that is used to render the file as html 5 doc by the browser...
+
+It is always of more importance to structure our html webpage rather just to add style to it.
+same goes in using--> <em>text goes in here using em tag</em>
+<!-- emphasis tags that displays importance to the browser.-->
+      <br>
+                    <i>text goes in here using i tag</i>
+<!-- no emphasis only italics -->
+
+<!-- same bold vs strong tag -->
+<h3> Always try to use <em>em</em> and <b>strong</b> instead of i and bold tag</h3>
+
+<h3>About lists:</h3>
+<!-- there are two types of list ul:unordered list and ol:ordered list -->
+<p>in order to use ol we write</p>
+<ol type="A">
+  <li> this is checking</li>
+  <li>this is checking </li>
+  <li>this is checking </li>
+
+  <h3> Combined use of ul and ol</h3>
+  <ul>
+  <li>first item</li>
+  <li>second item
+  <!-- Look, the closing </li> tag is not placed here! -->
+    <ol>
+      <li>second item first subitem</li>
+      <li>second item second subitem</li>
+      <li>second item third subitem</li>
+    </ol>
+  <!-- Here is the closing </li> tag -->
+  </li>
+  <li>third item</li>
+</ul>
+
+  <h3>Now we'll write something about images:</h3>
+
+<!--   we'll use the img tag which is a self closing tag but requires an attribute to it i.e. the address of the image.
+  If we get the image from internet we can copy the path and paste it into the image address...
+  in the src we add path... and in the alt we write what is to be displayed if the image is not visible. -->
+
+  <img src="https://media-exp1.licdn.com/dms/image/C5603AQECEZx6J04epQ/profile-displayphoto-shrink_400_400/0/1606124734754?e=1626912000&v=beta&t=JO7xvmxBUdPicfM1Sz3yXgSnZRs2UeCpP6Sszc2aaDI",alt="Abhinav's profie pic" height="100">
+  <img src="https://media-exp1.licdn.com/dms/image/C5603AQECEZx6J04epQ/profile-displayphoto-sh
+  rink_400_400/0/1606124734754?e=1626912000&v=beta&t=JO7xvmxBUdPicfM1Sz3yXgSnZRs2UeCpP6Sszc2aaDI" height="100">
+
+  <h2>IF YOU ARE FACING ANY DIFFICULTY IN OPENING IMAGE...
+    ALWAYS OPEN THE IMAGE IN NEW TAB THEN COPY IT'S URL</H2>
+
+  <p>Also in order to change the size of the image u can use height attribute and set its size to your requirements...</p>
+
+<!--   in the above mentioned method we use a path from a particular website and hence are dependent upon it.
+  so in order to remove the dependency we bring the image in the same folder that is of the website and here we can refer the image by just its name. 
+  However if we place the image inside a folder say image, then all we need is to do is to write path as image/abhinav.png -->
+
+<!--   WE should write in alt to increase our site's visibility as how the the search engine optimization works... -->
+
+<!--   Now we'll read something about anchor tag:
+  anchor tag is not a self closing tag, it's syntax is as follows
+<a href i.e hyperlinkreference
+<a href="address of website">text that is hyperlinked </a>-->
+  <a href="https://www.youtube.com/">This link will redirect to google</a>
+
+  <hr>
+
+  <h3 style="color: lightseagreen;"> Now about tables</h3>
+<!--   <table>
+    <tr>content </tr>
+    <tr>continued</tr>
+  </table> -->
+  <p>creating a table </p>
+  <p>a table looks like
+    <table style="border-style: dotted; border-width: 4px; border-color:cadetblue;"><!-- border is an attribut of the table tag by default there is no border to the table-->
+      <tr>
+        <td>content </td>
+        <td>content 2</td>
+      </tr>
+      <tr>
+        <td>content 3</td>
+        <td>content 4</td>
+      </tr>
+  </table>
+  </p>
+  <p>A table has three parts obviously you could have created a table without knowing about it...
+    but they are <ul>
+      <li>table head: <em>thead</em></li>
+      <li>table body: <em>tbody</em></li>
+      <li>table footer: <em>tfoot</em></li>
+</ul>
+<p> in order to make the header of the table bold which it is by default... we use "th" i.e the theader tag</p>
+<p> Both the below codes produce the same result but they have their own significance, if we create the table using the first method that would actually obstruct us in isolating the header alltogether and formatting it individually...
+  but by using the second method we can achieve the same very easily...</p>
+<!-- thead: table head
+    tbody: table body
+    tfoot: table footer
+    th: table header
+    tr: table row
+    td: table data-->
+<table>
+  <tr>
+    <th> First name</th>
+    <th> Last name</th>
+  </tr>
+  <tr>
+    <td> Abhinav</td>
+    <td> Sisodiya</td>
+  </tr>
+  <tr>
+    <td> Soniya </td>
+    <td> Singh</td>
+  </tr>
+</table>
+<br>
+<table>
+  <thead>
+    <tr> <!--here in thead we create tr just dont create td instead use th-->
+    <th> First name</th>
+    <th> Last name</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td> Abhinav</td>
+    <td> Sisodiya</td>
+  </tr>
+  <tr>
+    <td> Soniya </td>
+    <td> Singh</td>
+  </tr>
+  </tbody>
+  <tfoot>
+  </tfoot>
+</table>
+<p>There is a lot of formatting that can be done to the table but we avoid that using just the attributes of table tag because everything itself has working FORMATTING is best achieved by CSS</p>
+<p> There is also an attribute of cellspacing that increases the space between the cells of the table</p>
+<!-- You can use windows+. to open emoji keyboard... -->
+
+<p>in order to create a complex table like this </p>
+<table cellspacing="10" border="2">
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td>C++</td>
+            <td>⭐⭐⭐</td>
+          </tr>
+          <tr>
+            <td>Photography</td>
+            <td>⭐⭐⭐</td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td>HTML</td>
+            <td>⭐</td>
+          </tr>
+            <tr>
+              <td>CSS</td>
+              <td>⭐</td>
+            </tr>
+        </table>
+
+        </td>
+        </tr>
+  </table>
+
+  <br>
+
+<hr style="border-style: none; border-top-style: dotted;
+ border-width: 6px; border-color: cadetblue; width: 30% ;">
+
+  <br>
+
+<h2>Now we'll study about form</h2>
+<!-- <form> is a not a self closing tag -->
+<!-- form is an element and other elements are input that takes input from the user...-->
+<p> There are alot of attributes of input element</p>
+<p>Creating a form</p>
+<form> <!--form has some default values set don't change them-->
+
+  <label>ENTER YOUR NAME</label> <!--displays on the screen-->
+  <input type="text" name="" value="">
+  <input type="submit" name=""  ><!-- no value-->
+  <br>
+  <label>ENTER YOUR PASSword</label>
+  <input type="password" ><!-- no impact of using value or name-->
+  <!-- In form attribute called class, action by default action="index.html" i.e. it means when we hit submit it redirects us to index.html but this is not what we want we actually would like to have something to happen there is also an attribute of   method in this case is set to post which we'll use in a while.-->
+
+<!--   Now we'll use to send the contact info to email...
+  for that first we'll have to change the action to mailto:(here_comes_emailid), method=post this will post the contents in the form to the set email...
+
+  also we'll input attribute to email which will also have some basic checks on authenticity of entered email...
+
+  also inside form we have to set an attribute enctype to plain text so as to enable plain encoding -->
+
+<!-- There is also an element "Text area" to create a box -->
+</form>
+<p> Creating Text area</p>
+<label>TEXT AREA</label><br>
+<textarea name="Message" row="10" column="30" ></textarea>
+<!-- You should usually avoid including reset buttons in your forms. They're rarely useful, 
+  and are instead more likely to frustrate users who click them by mistake (often while trying to click the submit button). -->
+
+</body>
+</html>

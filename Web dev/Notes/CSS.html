@@ -1,0 +1,253 @@
+<!-- Cascading Style Sheets -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>notes of CSS</title>
+
+    <style >
+
+      /* everthing goes in the style tag to format the different tags used */
+
+      body{
+        /* style="background-color: blue;" */
+        background-color: #eaf6f6;  /*when inside the style as we want to make changes
+        in the body, hence we open the body {here we write directly where we want
+      commit changes like eg background-color:blue; */
+      }
+
+      hr{
+
+        background-color: grey;
+
+        /*this will not work becoz
+        firstly,there is already default css that is been done by the browser itself
+        secondly, there are some default setting that
+        are set like for this as we search on google about default setting of browser
+        that'll illustrate like here border-style: is set to inset However we want to set it to none;*/
+
+        border-style: none;
+
+      /*  but setting it to none and then running results in display of no hr
+        its height becomes zero
+        because by default border-Style: inset and border-width:1px
+        However setting border-style to none we created a hr of no height*/
+
+        height: 10px;
+      }
+
+      /* IMP point is that css tags can be applied to all as they remain the same*/
+      img{
+        background-color: red;
+      }
+      .bacon{
+        background-color: greenyellow;
+      }
+      .leafy{
+        background-color: khaki;
+      }
+      img:hover{
+        background-color: lightblue;
+      }
+      
+      .my{
+        transition: background-color 1s;
+      }
+
+      h2{
+        color: indigo;
+      }
+
+      h1{
+        color:lightcoral;
+      }
+
+      h3{
+        color:lightcoral;
+      }
+
+      .para{
+        padding: 25px 50px 50px;
+        color: white
+        ;
+      }
+
+    </style>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <!-- <body style="background-color: blue;"> -->
+    <!-- style is an attribute and inside the "" we write the css code and end it with; -->
+    
+    <h3>There are two types of CSS</h3>
+    <ol type="1"> <!--By writing type we specify which type of counting we want in the bullet points-->
+     <li>Internal CSS
+       <table>
+         <tr>
+           <td>Incline CSS:</td>
+           <td>For individual tag we write the css part in the desired tag</td>
+         </tr>
+         <tr>
+           <td>Heading part CSS:</td>
+           <td>For a paricular type of tag if same formatting is to be applied
+           in the webpage then this is used</td>
+         </tr>
+       </table>
+           </li>
+           <li>External CSS: Say if we want that our webpage connects 200 webpages, also
+           all the 200 pages have the same background, then it doesn't make sense to copy paste
+         the same part of head tags
+       <p>hence here we use External CSS, one</p>
+     </li>
+    </ol>
+    <p>for example if we have a lot many tags and we want to make changes for all the tags
+    we can do it using the style tag in the head of the html </p>
+    <h2>TESTING</h2>
+    <p> In order to create dotted line we have two options as follows:
+      border-style = dotted none none(for top bottom and side)
+      border style =none
+      border style top =dotted...</p>
+    <hr>
+    <p>In order to apply css to all the web pages we use external CSS
+    for that we use link in head of the webpage and point it to desired folder
+  as css file...</p>
+  <h3>Using external css</h3>
+  <p>we need to link our external css file to our html</p>
+  <h3>WHILE LINKING IT IS NECCESArry to make sure that href ="/" will not come in the beginging as
+  that means it is a root, and if / is not there it means there is a folder in the same hirechy</h3>
+  <p>The art of debugging</p>
+  <p>We use google chrome for webdev becoz of the presence of the Developer option
+  which helps to identitfy the problems and errors</p>
+  <p>When various methods are used to apply formatting to a same element then
+  in order to understand the priority hit the developer option in the chrome and see the
+priority list </p>
+<p>for example inline >> style<body{}> >> css style sheet </p>
+
+<br>
+
+<p>hit ctrl + shift + i for developer tools in chrome</p>
+
+<img src="./Screenshot (57).png" alt="about css syntax" height="200">;
+  </body>
+
+  <ul>
+    <li>in order to make changes to all the h1 tags used in the webpage we can use tag selector</li>
+    <li>in order to make changes to a specific element in the webpage we can use class selector</li>
+  </ul>
+
+  <p> Making a class in an element is equivalent to naming and ob</p>
+  <p>Use class to group element that would have similar design
+    as multiple element can have same class name
+  </p>
+  <p>Although Id and class me appear to be same they are not</p>
+  <p>As there can be multiple instances of class However there is only one instance of an id</p>
+
+  <h3>YOU CAN HAVE ONLY ONE ID NAME INSIDE A WEBPAGE </h3>
+  <p>That is 
+    <img id="first" alt="">
+     <hr id="first"> <!--this is invalid -->
+     However
+     same thing when is done through class is valid
+  </p>
+  <h2>When we give an analogy as class:Many persons having same NAME, whereas Id:a person's passport </h2>
+  <br>
+  <hr>
+  <p>However in real life practice we'll rarely come across the use of ids</p>
+  <!-- <img class="firstclass second class" alt=""> -->
+  <p>firstclass and secondclass are two classes which can be accessed and used individually</p>
+
+  <h2>Pseudo class</h2>
+  <p>There is a concept of Pseudo class when we go to mdn css we'll come across a number of elements
+    but there are some which start with a : </p>
+    <p>An example of this is a hover class i.e. we can define the style of an element when we
+      hover over it , move our cursor over that element
+    </p>
+    <img src="./bacon.png" alt="bacon">
+    <img src="./leafy.png" alt="leafy">
+<br>
+    <img class="bacon" src="./bacon.png" alt="">
+    <img  class="leafy" src="./leafy.png" alt="">
+   <br>
+   <img class="my" src="./leafy.png" alt="leafy">
+   <img class="my" src="./bacon.png" alt="bacon">
+
+   <p>favicon==fav icon</p>
+
+   <h1>Learning intermediate CSS</h1>
+   <p>remember to use chrome developer tools, there are some default CSS applied by 
+     browser itself
+   </p>
+   <h2>DIV is used to create divisions and style them according to our need</h2>
+   <p>alot many things can be customized by using padding border margin etc</p>
+   <ul>DISPLAY property:
+     <li>Block</li>
+     <li>Inline</li>
+     <li>Inline block</li>
+     <li>none</li>
+  </ul>
+  <h4>Many elements (i.e block) acquire entire width of the screen hence will not allow another
+    element to get displayed right beside it, whereas there are some elements (i.e inline) that allow 
+    other elements to get displayed beside them.
+  </h4>
+  <img src="./Screenshot (62).png" alt="" height="200">
+  <img src="./Screenshot (60).png" alt="" height="200">
+  <img src="./Screenshot (61).png" alt="" height="200">
+  <br>
+  <p>In order to achieve the following i.e. individually underline pro of the programmer we use???</p>
+  <img src="./Screenshot (63).png" alt="" height="200">
+  <p>if you thought that Making another paragraph inside the paragraph would help you are wrong because paragraph
+    is a block element and hence will make 3 blocks...
+  </p>
+  <img src="./Untitled.png" alt="" height="200" width="650" >
+  <img src="./css style for underline.png" alt="" width="650" height="200">
+  <br>
+  <p>There output would be</p>
+    <img src="./output of underline using para.png" alt="" width="400" height="200">
+    <p>Therefore in order to achieve what we aspire we will use span element which is an inline element</p>
+  <img src="./output of underline.png" alt="" height="200" width="1000">
+
+<hr>
+<p>Now about span and p bascially comparision of block VS inline</p>
+
+<img src="./Screenshot (67).png" alt="" width="800" height="400">
+<img src="./inlineblock.png" alt="" width="800" height="400">
+
+<p>The forth display type is none which is when applied to an element 
+  makes that element get disappeared from the webpage as if it wasn't written
+</p>
+<p>However there is also an other element that is called visibility</p>
+<img src="./visibility.png" alt="" width="800" height="400">
+<br>
+<hr>
+<h3>Rules of CSS Positioning</h3>
+<img src="./Screenshot (72).png" alt="" height="200" >
+<img src="./Screenshot (73).png" alt="" height="200">
+<img src="./3.png" alt="" height="200">
+<br>
+<hr style="border-style: dotted none none;
+ border-top:dotted; border-width:10px; border-color: grey;width: 30%; background-color:#eaf6f6 ;" >
+
+<h3>About Positioning</h3>
+<img src="./Screenshot (75).png" alt="" height="200">
+<p>before and after applying the code</p>
+<img src="./Screenshot (77).png" alt="" height="200">
+<img src="./Screenshot (78).png" alt="" height="200">
+
+<div style="position: relative;left:720px;background-color:rgb(48, 68, 97);height: 200px;width: 355px; bottom: 220px;">
+  <p class="para">First of all its imp to understand, "position:relative" ,as creating margin in the side
+    we write the code i.e if we write left:20px a margin of 20 pixel gets created in the left side.
+  </p>
+</div>
+
+<img src="./Screenshot (80).png" alt="" height="200" style="position:relative;  bottom: 210px">
+
+
+
+</html>
+
+<!-- border-style:dotted none none; border-style-top:dotted; border-width:10px; border-color:grey; -->
+
+
+
+<!-- Pseudo tag like hover -->
